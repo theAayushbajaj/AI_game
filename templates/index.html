@@ -1,0 +1,311 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Kids Aptitude</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.fancybox.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  min-height:45px;
+}
+
+input[type=email]:focus {
+  border: 3px solid #e74c3c;
+}
+
+
+
+
+
+
+
+    </style>
+
+</head>
+<body data-spy="scroll" data-target=".navbar-collapse">
+
+<div class="culmn">
+    <header id="main_menu" class="header navbar-fixed-top">
+        <div class="main_menu_bg">
+            <div class="container">
+                <div class="row">
+                    <div class="nave_menu">
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="#home">
+                                        <h2>Linguistic Pandas</h2>
+                                    </a>
+                                </div>
+
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="#home">HOME</a></li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </header> <!--End of header -->
+
+
+    <!--home Section -->
+    <section id="home" class="home">
+        <div class="overlay">
+            <div class="home_skew_border">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 ">
+                            <div class="main_home_slider text-center">
+                                <div class="single_home_slider">
+                                    <div class="main_home wow fadeInUp" data-wow-duration="700ms" style="padding-top: 150px;padding-bottom: 350px;">
+                                        <h3>Kids Mental Health is Our First Priority</h3>
+                                        <h1>Kids Aptitude Finder</h1>
+                                        <div class="separator"></div>
+                                        <p style="padding-bottom: 0px;">AI game for evaluating Aptitude using Gardner's MI</p>
+                                        <div class="home_btn">
+                                            <a href="" class="btn btn-lg m_t_10" id="individualBtn">Individual Login</a>
+                                            <a href="" class="btn btn-default" id="schoolBtn">School Login</a>
+                                            <a href="" class="btn btn-default" id="parentBtn">Parent Login</a>
+                                        </div>
+
+                                        <div class="row" style="margin-top:40px;" id="enter_email_row">
+
+                                            <div class="col-sm-12">
+
+                                                <form action="/" id="login_form" method="post">
+                                                    <div class="row">
+                                                        <div class="col-sm-10">
+                                                            <input type="email" class="form-control" name="email" id="email" value="" placeholder="Enter Email" required="">
+                                                            <input type="email" class="form-control" name="school_email" id="school_email" value="" placeholder="Enter Email" required="">
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <input type="submit" value="Login here" class="btn btn-lg" style="margin-top:0px">
+                                                        </div>
+                                                    </div>
+                                                </form>
+
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scrooldown">
+                    <a href="#feature"><i class="fa fa-arrow-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </section><!--End of home section -->
+
+
+    <!--feature section -->
+    <section id="feature" class="feature sections">
+        <div class="container">
+
+            <div class="row">
+                <div class="main_feature text-center">
+
+                    <div class="col-sm-3">
+                        <div class="single_feature">
+                            <div class="single_feature_icon">
+                                <i class="fa fa-clone"></i>
+                            </div>
+
+                            <h4>Visual-Spatial Intelligence</h4>
+                            <div class="separator3"></div>
+                            <p>People who are strong in visual-spatial intelligence are good at visualizing things. These individuals are often good with directions as well as maps, charts, videos,
+                                and pictures.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="single_feature">
+                            <div class="single_feature_icon">
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+
+                            <h4>Linguistic-Verbal Intelligence</h4>
+                            <div class="separator3"></div>
+                            <p>People who are strong in linguistic-verbal intelligence are able to use words well, both when writing and speaking. These individuals are typically very good at writing
+                                stories, memorizing information, and reading.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="single_feature">
+                            <div class="single_feature_icon">
+                                <i class="fa fa-lightbulb-o"></i>
+                            </div>
+                            <h4>Logical-Mathematical Intelligence</h4>
+                            <div class="separator3"></div>
+                            <p>People who are strong in logical-mathematical intelligence are good at reasoning, recognizing patterns, and logically analyzing problems. These individuals tend to think
+                                conceptually about numbers, relationships, and patterns.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="single_feature">
+                            <div class="single_feature_icon">
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+
+                            <h4>Bodily-Kinesthetic Intelligence</h4>
+                            <div class="separator3"></div>
+                            <p>Those who have high bodily-kinesthetic intelligence are said to be good at body movement, performing actions, and physical control. People who are strong in this area
+                                tend to have excellent hand-eye coordination and dexterity.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="main_feature text-center">
+
+                    <div class="col-sm-3">
+                        <div class="single_feature">
+                            <div class="single_feature_icon">
+                                <i class="fa fa-clone"></i>
+                            </div>
+
+                            <h4>Musical Intelligence</h4>
+                            <div class="separator3"></div>
+                            <p>People who have strong musical intelligence are good at thinking in patterns, rhythms, and sounds. They have a strong appreciation for music and are often good at
+                                musical composition and performance.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="single_feature">
+                            <div class="single_feature_icon">
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+
+                            <h4>Interpersonal Intelligence</h4>
+                            <div class="separator3"></div>
+                            <p>Those who have strong interpersonal intelligence are good at understanding and interacting with other people. These individuals are skilled at assessing the emotions,
+                                motivations, desires, and intentions of those around them.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="single_feature">
+                            <div class="single_feature_icon">
+                                <i class="fa fa-lightbulb-o"></i>
+                            </div>
+                            <h4>Intrapersonal Intelligence</h4>
+                            <div class="separator3"></div>
+                            <p>Individuals who are strong in intrapersonal intelligence are good at being aware of their own emotional states, feelings, and motivations. They tend to enjoy
+                                self-reflection and analysis, including daydreaming, exploring relationships with others, and assessing their personal strengths.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="single_feature">
+                            <div class="single_feature_icon">
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+
+                            <h4>Naturalistic Intelligence</h4>
+                            <div class="separator3"></div>
+                            <p>This intelligence refers to a person's natural interest in the environment. These people enjoy being in nature and want to protect it from pollution. Students with
+                                strong naturalistic intelligence easily recognize and categorize plants, animals, and rocks.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div><!--End of container -->
+    </section><!--End of feature Section -->
+
+</div>
+
+<script src="{{ url_for('static', filename='js/jquery-1.11.2.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+<script type="text/javascript">
+
+    $('#enter_email_row').hide();
+
+    $('#individualBtn').click(function(){
+        $('#enter_email_row').show();
+        $('#login_form').attr('action', '/individual');
+        $('#email').attr('type', 'email');
+        $('#school_email').attr('type', 'hidden');
+        return false;
+    });
+
+    $('#schoolBtn').click(function(){
+        $('#enter_email_row').show();
+        $('#login_form').attr('action', '/school');
+        $('#email').attr('type', 'hidden');
+        $('#school_email').attr('type', 'email');
+        return false;
+    });
+
+
+    $('#parentBtn').click(function(){
+        $('#enter_email_row').show();
+        $('#login_form').attr('action', '/parent');
+        $('#email').attr('type', 'email');
+        $('#school_email').attr('type', 'hidden');
+        return false;
+    });
+
+
+
+
+
+</script>
+
+</body>
+</html>

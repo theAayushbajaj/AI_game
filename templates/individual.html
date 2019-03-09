@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+    <style>
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  text-align: center;
+  background: #000000;
+  color: white;
+  font-size: 20px;
+}
+
+/* Page Content */
+.content {padding:20px;}
+
+.bgimg1 {
+    background-image: url('/static/images/bg1.png');
+}
+
+.bgimg2 {
+    background-image: url('/static/images/bg2.png');
+}
+
+.bgimg3 {
+    background-image: url('/static/images/bg3.png');
+}
+
+.transparent{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";       /* IE 8 */
+    filter: alpha(opacity=10);  /* IE 5-7 */
+    -moz-opacity: 0.1;          /* Netscape */
+    -khtml-opacity: 0.1;        /* Safari 1.x */
+    opacity: 0.1;               /* Good browsers */
+}
+
+
+    </style>
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Kids Aptitude</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="nav navbar-nav navbar-right">
+            <!--<li class="nav-item active">-->
+            <!--<a class="nav-link" href="#">Take Complete Test <span class="sr-only">(current)</span></a>-->
+            <!--</li>-->
+        </ul>
+    </div>
+</nav>
+
+<div class="header">
+    <p>Individual Games</p>
+</div>
+
+<div class="bgimg1">
+
+    <div class="row" style="margin:10px;">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header" id="maze_card">
+                    Maze Game
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" id="maze_status">The Game is not running Currently</h5>
+                    <div class="progress" style="margin-bottom:20px" id="maze_load">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>
+                    <a href="javascript:openMaze();" target="_blank" class="btn btn-success" id="maze_btn">Start this Game</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header" id="maths_card">
+                    Maths Game
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" id="maths_status">The Game is not running Currently</h5>
+                    <div class="progress" style="margin-bottom:20px" id="maths_load">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>
+                    <a href="javascript:openMaths();" target="_blank" class="btn btn-success" id="maths_btn">Start this Game</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row" style="margin:10px;">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header" id="video_card">
+                    Video Analysis Game
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" id="video_status">The Game is not running Currently</h5>
+                    <div class="progress" style="margin-bottom:20px" id="video_load">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>
+                    <a href="javascript:openVideo();" target="_blank" class="btn btn-success" id="video_btn">Start this Game</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header" id="music_card">
+                    Music Game
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" id="music_status">The Game is not running Currently</h5>
+                    <div class="progress" style="margin-bottom:20px" id="music_load">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>
+                    <a href="javascript:openMusic();" target="_blank" class="btn btn-success" id="music_btn">Start this Game</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin:10px;">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header" id="nature_card">
+                    Naturalistic Analysis Game
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" id="nature_status">The Game is not running Currently</h5>
+                    <div class="progress" style="margin-bottom:20px" id="nature_load">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>
+                    <a href="javascript:openNature();" target="_blank" class="btn btn-success" id="nature_btn">Start this Game</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header" id="body_card">
+                    Body Game
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" id="body_k_status">The Game is not running Currently</h5>
+                    <div class="progress" style="margin-bottom:20px" id="body_load">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>
+                    <a href="javascript:openBody();" target="_blank" class="btn btn-success" id="body_btn">Start this Game</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="header">
+    <p>Multiple Intelligence Features</p>
+</div>
+
+<div class="bgimg3">
+
+    <div class="row" style="margin:10px;">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    Visual Spatial Test
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Testing your visual Skills</h5>
+                    {% if result.visual == 0 %}
+                    <p class="card-text" id="visual_status">You have not taken this Test yet!</p>
+                    {% else %}
+                    <p class="card-text">Your Maximum score for this test was : {{ result.visual }}/100</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    Math Intelligence Test
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Testing your Math Skills</h5>
+                    {% if result.math == 0 %}
+                    <p class="card-text" id="math_status">You have not taken this Test yet!</p>
+                    {% else %}
+                    <p class="card-text">Your Maximum score for this test was : {{ result.math }}/100</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row" style="margin:10px;">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    Verbal Test
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Testing your verbal Skills</h5>
+                    {% if result.verbal == 0 %}
+                    <p class="card-text" id="verbal_status">You have not taken this Test yet!</p>
+                    {% else %}
+                    <p class="card-text">Your Maximum score for this test was : {{ result.verbal }}/100</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    Intrapersonal Test
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Testing your Logical Math Skills</h5>
+                    {% if result.intrapersonal == 0 %}
+                    <p class="card-text" id="intrapersonal_status">You have not taken this Test yet!</p>
+                    {% else %}
+                    <p class="card-text">Your Maximum score for this test was : {{ result.intrapersonal }}/100</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row" style="margin:10px;">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    Logical Intelligence Test
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Testing your logical Skills</h5>
+                    {% if result.verbal == 0 %}
+                    <p class="card-text" id="logical_status">You have not taken this Test yet!</p>
+                    {% else %}
+                    <p class="card-text">Your Maximum score for this test was : {{ result.logical }}/100</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    Bodily-Kinesthetic Intelligence Test
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Testing your Bodily-Kinesthetic Intelligence</h5>
+                    {% if result.intrapersonal == 0 %}
+                    <p class="card-text" id="body_status">You have not taken this Test yet!</p>
+                    {% else %}
+                    <p class="card-text">Your Maximum score for this test was : {{ result.body }}/100</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row" style="margin:10px;">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    Musical Intelligence Test
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Testing your musical Intelligence</h5>
+                    {% if result.verbal == 0 %}
+                    <p class="card-text" id="musical_status">You have not taken this Test yet!</p>
+                    {% else %}
+                    <p class="card-text">Your Maximum score for this test was : {{ result.musical }}/100</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    Naturalistic Intelligence Test
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Testing your Naturalistic Intelligence</h5>
+                    {% if result.intrapersonal == 0 %}
+                    <p class="card-text" id="inature_status">You have not taken this Test yet!</p>
+                    {% else %}
+                    <p class="card-text">Your Maximum score for this test was : {{ result.nature }}/100</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static' , filename='js/Chart.min.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+
+    var winMaze;
+    var winMaths;
+    var winVideo;
+    var winMusic;
+    var winNature;
+    var winBody;
+
+    function openMaze(){
+        winMaze = window.open('http://localhost:5000/game/maze', '_blank');
+    }
+
+    function openMaths(){
+        winMaths = window.open('http://localhost:5000/game/maths', '_blank');
+    }
+
+    function openVideo(){
+        winVideo = window.open('http://localhost:5000/game/video', '_blank');
+    }
+
+    function openMusic(){
+        winMusic = window.open('http://localhost:5000/game/music', '_blank');
+    }
+
+    function openNature(){
+        winNature = window.open('http://localhost:5000/game/nature', '_blank');
+    }
+
+    function openBody(){
+        winBody = window.open('http://localhost:5000/game/body', '_blank');
+    }
+
+    $('#maze_card').css("background-color", "cyan");
+    $('#maths_card').css("background-color", "cyan");
+    $('#video_card').css("background-color", "cyan");
+    $('#music_card').css("background-color", "cyan");
+    $('#nature_card').css("background-color", "cyan");
+    $('#body_card').css("background-color", "cyan");
+
+    var metadata = {{ metadata|safe }}
+
+    var socket = io.connect('http://' + document.domain + ':' + location.port + '/individual/' + metadata.uuid);
+
+    $('#maze_load').hide();
+    $('#maze_status').html("The Game is not running Currently");
+
+    socket.on("maze", function(json) {
+
+        if(json.status == "start"){
+            $('#maze_load').show();
+            $('#maze_btn').hide();
+            $('#maze_status').html("The Game is in progress");
+        }else{
+            $('#maze_load').hide();
+            $('#maze_btn').show();
+            $('#maze_status').html("You have completed the Game with score : " + Math.round(json['final_score']) + '/100');
+            $('#maze_card').css("background-color", "green");
+            winMaze.close();
+        }
+
+    });
+
+
+    $('#maths_load').hide();
+    $('#maths_status').html("The Game is not running Currently");
+
+    socket.on("maths", function(json) {
+
+        if(json.status == "start"){
+            $('#maths_load').show();
+            $('#maths_btn').hide();
+            $('#maths_status').html("The Game is in progress");
+        }else{
+            $('#maths_load').hide();
+            $('#maths_btn').show();
+            $('#maths_status').html("You have completed the Game with score : " + Math.round(json['final_score']) + '/100');
+            $('#maths_card').css("background-color", "green");
+            winMaths.close();
+        }
+
+    });
+
+    $('#video_load').hide();
+    $('#video_status').html("The Game is not running Currently");
+
+    socket.on("video", function(json) {
+
+        if(json.status == "start"){
+            $('#video_load').show();
+            $('#video_btn').hide();
+            $('#video_status').html("The Game is in progress");
+        }else{
+            $('#video_load').hide();
+            $('#video_btn').show();
+            $('#video_status').html("You have completed the Game with score : " + Math.round(json['final_score']) + '/100');
+            $('#video_card').css("background-color", "green");
+            winVideo.close();
+        }
+
+    });
+
+    $('#music_load').hide();
+    $('#music_status').html("The Game is not running Currently");
+
+    socket.on("music", function(json) {
+
+        if(json.status == "start"){
+            $('#music_load').show();
+            $('#music_btn').hide();
+            $('#music_status').html("The Game is in progress");
+        }else{
+            $('#music_load').hide();
+            $('#music_btn').show();
+            $('#music_status').html("You have completed the Game with score : " + Math.round(json['final_score']) + '/100');
+            $('#music_card').css("background-color", "green");
+            winMusic.close();
+        }
+
+    });
+
+    $('#nature_load').hide();
+    $('#nature_status').html("The Game is not running Currently");
+
+    socket.on("nature", function(json) {
+
+        if(json.status == "start"){
+            $('#nature_load').show();
+            $('#nature_btn').hide();
+            $('#music_status').html("The Game is in progress");
+        }else{
+            $('#nature_load').hide();
+            $('#nature_btn').show();
+            $('#nature_status').html("You have completed the Game with score : " + Math.round(json['final_score']) + '/100');
+            $('#nature_card').css("background-color", "green");
+            winNature.close();
+        }
+
+    });
+
+    $('#body_load').hide();
+    $('#body_k_status').html("The Game is not running Currently");
+
+    socket.on("body", function(json) {
+
+        if(json.status == "start"){
+            $('#body_load').show();
+            $('#body_btn').hide();
+            $('#body_k__status').html("The Game is in progress");
+        }else{
+            $('#body_load').hide();
+            $('#body_btn').show();
+            $('#body_k_status').html("You have completed the Game with score : " + Math.round(json['final_score']) + '/100');
+            $('#body_card').css("background-color", "green");
+            winBody.close();
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
